@@ -1,0 +1,10 @@
+Dockerfile
+.dockerignore
+.gitignore
+activate
+.git/
+venv/
+__pycache__/
+*.pdf
+*.png
+*.jpg
