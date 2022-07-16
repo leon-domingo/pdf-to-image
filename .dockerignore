@@ -5,6 +5,8 @@ activate
 .git/
 venv/
 __pycache__/
+config-sample.py
+.env.sample
 *.pdf
 *.png
 *.jpg
