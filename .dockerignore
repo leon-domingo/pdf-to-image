@@ -5,8 +5,10 @@ activate
 .git/
 venv/
 __pycache__/
+examples/
 config-sample.py
-.env.sample
+.env*
+README.md
 *.pdf
 *.png
 *.jpg
