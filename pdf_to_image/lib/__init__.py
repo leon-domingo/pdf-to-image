@@ -3,6 +3,8 @@ from pdf2image import convert_from_bytes
 from PIL import Image
 from io import BytesIO
 
+from .helpers import get_size
+
 from .constants import (
     FORMATS,
     IMAGE_FORMAT__PNG,
@@ -23,10 +25,7 @@ def pdf_to_image(
     images = convert_from_bytes(pdf_content)
 
     page_width, page_height = images[0].size
-    if mode == ImageMode.VERTICAL.value:
-        size = (page_width, page_height * len(images))
-    elif mode == ImageMode.HORIZONTAL.value:
-        size = (page_width * len(images), page_height)
+    size = get_size(page_width, page_height, len(images), mode)
 
     full_image = Image.new("RGB", size)
 
